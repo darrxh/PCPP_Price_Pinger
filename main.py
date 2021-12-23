@@ -1,16 +1,32 @@
-# This is a sample Python script.
+import requests
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def request():
+    r = requests.get("https://ca.pcpartpicker.com/product/gBWfrH/msi-b450i-gaming-plus-ac-mini-itx-am4-motherboard-b450i-gaming-plus-ac")
+    print (r.text)
+    print (r.headers)
+
+#function returns boolean True or False based on server status for each URL
+def clear_status(part_list):
+    for each_part in part_list:
+            print ("Returned error")
+            return False
+    print ("Returned okay")
+    return True
+
+def input_url():
+    url_list = []
+    while True:
+        print ("Input URL, type/enter x to finish. \n")
+        new_part = input(str())
+        if (new_part == "x"):
+            break
+        url_list.append(new_part)
+    print ("Total number of URLs inputted: {}".format(len(url_list)))
+    return url_list
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+list = input_url()
+clear_status(list)
