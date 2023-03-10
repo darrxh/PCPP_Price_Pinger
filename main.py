@@ -8,8 +8,8 @@ def request():
 #function returns boolean True or False based on server status for each URL
 def clear_status(part_list):
     for each_part in part_list:
-            print ("Returned error")
-            return False
+        print ("Returned error")
+        return False
     print ("Returned okay")
     return True
 
@@ -23,10 +23,6 @@ def input_url():
         url_list.append(new_part)
     print ("Total number of URLs inputted: {}".format(len(url_list)))
     return url_list
-
-
-
-
 
 list = input_url()
 clear_status(list)
