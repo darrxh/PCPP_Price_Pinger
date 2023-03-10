@@ -1,5 +1,5 @@
 
- <img src="[https://github.com/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png)" width="50%">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png" width="50%">
  
 # Price Notifier for PC Part Picker
 
