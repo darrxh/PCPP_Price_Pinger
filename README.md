@@ -1,4 +1,4 @@
- ![PCPP Icon](https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png)
+ ![PCPP Icon](https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png | width=300)
 # Price Updater
 
 Gives user periodic updates on price components from PCPartPicker.com using GET requests
