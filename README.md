@@ -6,7 +6,7 @@ Uses PCPartPicker API to fetch price data on PC Components.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
 
 ```bash
 pip install pcpartpicker
