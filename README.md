@@ -1,5 +1,6 @@
- ![PCPP Icon](https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png | width=300)
-# Price Updater
+
+ <img src="[https://github.com/favicon.ico](https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png)" width="48">
+# Price Notifier for PC Part Picker
 
 Gives user periodic updates on price components from PCPartPicker.com using GET requests
 
