@@ -4,7 +4,7 @@ Gives user periodic updates on price components from PCPartPicker.com using GET 
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies before starting application.
 
 ```bash
 pip install requests
@@ -25,23 +25,22 @@ python3 main.py
 ```
 4.Type and Enter:
 ```bash
-add
+add #to add component URLs from PCPartPicker. 
 ```
-to add component URLs from PCPartPicker. 
 
 5. Type and Enter:
 
 ```bash
-start
+start #to start the checker.
 ```
-to start the checker.
+
 
 - Type and Enter:
 
 ```bash
-help
+help #for more commands.
 ```
-for more commands.
+
 
 
 ## Contributing
