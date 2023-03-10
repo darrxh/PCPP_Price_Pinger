@@ -1,23 +1,48 @@
 # PCPartPicker Price Updater
 
-Gives user updates on price components from PCPartPicker.com
- 
-Uses PCPartPicker API to fetch price data on PC Components. 
+Gives user periodic updates on price components from PCPartPicker.com using GET requests
 
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install dependencies.
 
 ```bash
-pip install pcpartpicker
+pip install requests
 pip install simpleaudio
 ```
 
 ## Usage
-
+1. Unzip or clone repository onto machine.
+2. Open a terminal or command line in resulting directory.
+3. Type and Enter:
 ```bash
 python main.py
 ```
+or 
+
+```bash
+python3 main.py
+```
+4.Type and Enter:
+```bash
+add
+```
+to add component URLs from PCPartPicker. 
+
+5. Type and Enter:
+
+```bash
+start
+```
+to start the checker.
+
+- Type and Enter:
+
+```bash
+help
+```
+for more commands.
+
 
 ## Contributing
 
