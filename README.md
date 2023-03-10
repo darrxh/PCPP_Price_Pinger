@@ -1,7 +1,7 @@
 
  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/PCPartPicker_Logo.png" width="50%">
  
-# Price Notifier for PC Part Picker
+# Price Notifier for PCPartPicker.com
 
 Gives user periodic updates on price components from PCPartPicker.com using GET requests
 
