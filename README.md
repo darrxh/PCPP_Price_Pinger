@@ -3,7 +3,8 @@
  
 # Price Notifier for PCPartPicker.com
 
-Gives user periodic updates on price components from PCPartPicker.com using GET requests
+Console application that gives user periodic updates on price components from PCPartPicker.com using GET requests
+- 
 
 ## Installation
 
@@ -19,14 +20,10 @@ pip install simpleaudio
 2. Open a terminal or command line in resulting directory.
 3. Type and Enter:
 ```bash
-python main.py
+python main.py #or 'python3 main.py' depending on installation
 ```
-or 
 
-```bash
-python3 main.py
-```
-4.Type and Enter:
+4. Type and Enter:
 ```bash
 add #to add component URLs from PCPartPicker. 
 ```

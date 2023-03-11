@@ -1,7 +1,25 @@
-import requests
+from requests import get
+from threading import Thread, active_count
+from json import dumps, load
+from time import sleep
+from simpleaudio import WaveObject
+
+class Component:
+    def __init__(self):
+        self.url = ""
+        self.name = self.title_fetcher()
+
+    def title_fetcher(self):
+        new_request = get(self.url)
+
+
+class Config:
+    def __init__(self):
+        self.interval = 3600
+        self.component_list = []
 
 def request():
-    r = requests.get("https://ca.pcpartpicker.com/product/gBWfrH/msi-b450i-gaming-plus-ac-mini-itx-am4-motherboard-b450i-gaming-plus-ac")
+    r = get(url)
     print (r.text)
     print (r.headers)
 
