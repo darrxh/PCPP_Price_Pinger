@@ -3,8 +3,8 @@
  
 # Price Notifier for PCPartPicker.com
 
-Console application that gives user periodic updates on price components from PCPartPicker.com using GET requests
-- 
+- Console application that gives user periodic updates on price components from PCPartPicker.com using GET requests
+
 
 ## Installation
 
