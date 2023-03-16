@@ -1,8 +1,9 @@
 from requests import get
-from threading import Thread, active_count
+from bs4 import BeautifulSoup
 from json import dumps, load
 from time import sleep
 from simpleaudio import WaveObject
+regions = ["au", "be", "ca", "de", "es", "fr", "se","in", "ie", "it", "nz", "uk", "us"]
 
 class Component:
     def __init__(self):
@@ -11,12 +12,15 @@ class Component:
 
     def title_fetcher(self):
         new_request = get(self.url)
+        new_request = BeautifulSoup(new_request.text, "html.parser")
+        return new_request.find("h1", class_="pageTitle").string
 
 
 class Config:
     def __init__(self):
         self.interval = 3600
         self.component_list = []
+        self.region = ""
 
 def request():
     r = get(url)
