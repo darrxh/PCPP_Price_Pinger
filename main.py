@@ -15,12 +15,26 @@ class Component:
         new_request = BeautifulSoup(new_request.text, "html.parser")
         return new_request.find("h1", class_="pageTitle").string
 
-
 class Config:
     def __init__(self):
         self.interval = 3600
         self.component_list = []
         self.region = ""
+
+def get_status_list(html_object):
+    status_list = []
+    retailer_table = html_object.find("table", class_="xs-col-12")
+    retailer_list = retailer_table.findall("tr")
+    for each_retailer in retailer_list:
+        retailer_dict = dict()
+        retailer_dict["price"] = retailer_list.find("td",class_="td__finalPrice")
+        retailer_list["name"] = retailer_list.find("td",class_="td__logo")
+        retailer_list["url"] = retailer_list.find("td")
+
+        retailer_list["stock"] = retailer_list.find("td",class_="td__availability td__availability--outOfStock")
+
+
+
 
 def request():
     r = get(url)
