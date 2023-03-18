@@ -27,14 +27,16 @@ def get_status_list(html_object):
     retailer_list = retailer_table.findall("tr")
     for each_retailer in retailer_list:
         retailer_dict = dict()
-        retailer_dict["price"] = retailer_list.find("td",class_="td__finalPrice")
+        price_string = retailer_list.find("a",class_="pp_async_mr").string
+        retailer_dict["price"] = int(price_string[1:])
         retailer_list["name"] = retailer_list.find("td",class_="td__logo")
-        retailer_list["url"] = retailer_list.find("td")
-
-        retailer_list["stock"] = retailer_list.find("td",class_="td__availability td__availability--outOfStock")
-
-
-
+        retailer_list["url"] = retailer_list.find("td",class_"td__buy").find("a", href=True)
+        try:
+            retailer_list["stock"] = retailer_list.find("td",class_="td__availability td__availability--outOfStock")
+        except Exception:
+            retailer_list["stock"] = retailer_list.find("td",class_="td__availability td__availability--inStock")
+        status_list.append(retailer_dict)
+    return status_list
 
 def request():
     r = get(url)
@@ -62,3 +64,30 @@ def input_url():
 
 list = input_url()
 clear_status(list)
+
+def main():
+    command_dict = {"add": add_component,
+                    "del": del_component,
+                    "update": quick_check,
+                    "newconfig": start_new,
+                    "start": start,
+                    "stop": stop,
+                    "help": print_manual}
+
+    while True:
+        print (f"{colour.default} -------------------------")
+        user_input = input()
+        print (f"{colour.default} -------------------------")
+        if (user_input in command_dict.keys()):
+            command_dict[user_input]()
+        elif (user_input == "exit"):
+            stop()
+            print(f"{colour.red} Program exiting. {colour.default}")
+            break
+        elif (user_input == ""):
+            print (f"{colour.default}\n")
+        else:
+            print (f"{colour.error} Unknown command. {colour.default}")
+
+if __name__ == '__main__':
+    main()
