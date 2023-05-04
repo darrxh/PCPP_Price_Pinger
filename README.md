@@ -7,7 +7,9 @@
 
 ## Issues
 
--No endpoints for PCPartPicker.com. Will not accept GET requests. Program development incomplete, and ceased until workaround is found, or until official API is released. 
+- No valid endpoints for PCPartPicker.com. Will not accept GET requests (403 responses). Program development incomplete, and ceased until workaround is found, or until official API is released. 
+
+- Users welcome to use this similar application in the meantime: https://github.com/darrxh/Techping
 
 ## Installation
 
