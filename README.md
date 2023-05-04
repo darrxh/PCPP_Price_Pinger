@@ -5,6 +5,9 @@
 
 - Console application that gives user periodic updates on price components from PCPartPicker.com using GET requests
 
+## Issues
+
+-No endpoints for PCPartPicker.com. Will not accept GET requests. Program development incomplete, and ceased until workaround is found, or until official API is released. 
 
 ## Installation
 
